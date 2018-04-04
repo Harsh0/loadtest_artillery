@@ -1,0 +1,343 @@
+config:
+  target: 'https://dev.goodcop.cldcvr.com/v1'
+  payload:
+    path: "gc.csv"
+    fields:
+       - "email"
+  phases:
+    - duration: 600
+      arrivalRate: 17
+  processor: "./gc.js"
+scenarios:
+- flow:
+    - post:
+        url: "/user/login"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+        json:
+            email: "{{ email }}"
+            password: "1q2w3e4r5t"
+        capture:
+            json: "$.token"
+            as: "token"
+        #afterResponse: "logHeaders1"
+      #  afterResponse: "logHeaders"
+    # - put:
+    #     url: "/user/{{ userId }}/rule"
+    #     headers:
+    #           Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+    #     beforeRequest: "setJSONBody"
+    #     afterResponse: "logHeaders"
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
+
+    - get:
+        url: "/auth/"
+        headers:
+              Authorization: "_qV7fTqAwuKTDLSt0N2RrRfC6qULVnFx0pE0Lo8srEE="
+              user-token: "{{ token }}"
+        beforeRequest: "setJSONBody"
+        #afterResponse: "logHeaders"
